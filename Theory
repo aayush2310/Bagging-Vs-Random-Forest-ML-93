@@ -1,0 +1,15 @@
+RF is internally an implementation of Bagging.
+
+1)In bagging we can use different base models but in random forest we use only decision trees.
+  SYNTAX:-In bagging syntax,we have a parameter to select the base estimator but in the random forest we dont have any such parameter.
+  
+2)Lets us suppose we take the bagging syntax and initialize each base model as decision tree,then also it is not a random forest.The difference comes in feature selection
+  or feature sampling also called column sampling.
+  (IMP)**
+  In bagging lets suppose we take decision trees as base model and we do column sampling in which initially we had 5 columns and we selected 2 columns then in bagging the 
+  first decision tree was sampled and got column 1,3 then that whole decision tree would be made on the basis of column 1,3
+  But in random forest lets us suppose the first decision tree was given a sampled column as 1,3 then 1,3 will be used for the first level classification then in the next 
+  level sampling will be done and lets say we got 2,5 then those two columns will be used in that level and so on.
+  So,more randomness is introduced in case of Random Forest as column sampling is done at each level.
+  
+  Performance(RF)>(Bagging)
